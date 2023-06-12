@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pname</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #FFC3A0, #8FD3F4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .content-container {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      margin-bottom: 40px;
+    }
+    .logo {
+      max-width: 300px;
+      height: auto;
+    }
+    .description {
+      margin-left: 20px;
+      color: #333;
+    }
+    .options-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+    .option-container {
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .option-button {
+      width: 100%;
+      padding: 8px 15px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .option-button:hover {
+      background-color: #45a049;
+    }
+    .default-description {
+      margin-top: 20px;
+      color: #333;
+    }
+    .footer {
+      margin-top: auto;
+      text-align: center;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <img class="logo" src="file:///C:/Users/nidhi/Downloads/sales.png" alt="Image">
+    <div class="description">
+      <h1>Pname</h1>
+      <p>Pname is a service management.</p>
+    </div>
+  </div>
+  
+  <div class="options-container">
+    <div class="option-container">
+      <button class="option-button" onclick="navigateTo('incident')">Incident Request</button>
+      <p class="default-description">Click the button to submit an incident request.</p>
+    </div>
+    
+    <div class="option-container">
+      <button class="option-button" onclick="navigateTo('change')">Change Request</button>
+      <p class="default-description">Click the button to submit a change request.</p>
+    </div>
+    
+    <div class="option-container">
+      <button class="option-button" onclick="navigateTo('documentation')">Documentation</button>
+      <p class="default-description">Click the button to access documentation.</p>
+    </div>
+    
+    <div class="option-container">
+      <button class="option-button" onclick="navigateTo('enrichment')">Enrichment Information</button>
+      <p class="default-description">Click the button to access enrichment information.</p>
+    </div>
+    
+    <div class="option-container">
+      <button class="option-button" onclick="navigateTo('send')">Send Data to Pname</button>
+      <p class="default-description">Click the button to send data to Pname.</p>
+    </div>
+    
+    <div class="option-container">
+      <button class="option-button" onclick="navigateTo('receive')">Receive Data from Pname</button>
+      <p class="default-description">Click the button to receive data from Pname.</p>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <p>&copy; 2023 Pname. All rights reserved. For further assistance, please email <a href="mailto:xyz@gmail.com">xyz@gmail.com</a>.</p>
+  </div>
+  
+  <script>
+    function navigateTo(option) {
+      if (option === 'incident') {
+        // Open incident request URL in a new window
+        window.open("incident_request.html", "_blank");
+      } else if (option === 'change') {
+        // Open change request URL in a new window
+        window.open("change_request.html", "_blank");
+      } else if (option === 'documentation') {
+        // Open documentation URL in a new window
+        window.open("documentation.html", "_blank");
+      } else if (option === 'enrichment') {
+        // Open enrichment information URL in a new window
+        window.open("enrichment.html", "_blank");
+      } else if (option === 'send') {
+        // Open send data to Pname URL in a new window
+        window.open("send_to_Pname.html", "_blank");
+      } else if (option === 'receive') {
+        // Open receive data from Pname URL in a new window
+        window.open("receive_from_Pname.html", "_blank");
+      }
+    }
+  </script>
+</body>
+</html>
